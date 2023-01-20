@@ -8,14 +8,12 @@ Per.addEventListener("click", (event) => {
 		success: function (data) {
 			let datas = JSON.parse(data);
 
+			var ts =
+				"<table> <tr> <th>Prenom</th> <th>Nom</th> <th>Age</th> <th>Telephone</th> <th>Adresse</th> </tr> <tr> <td>{{prenom}}</td> <td>{{nom}}</td> <td>{{age}}</td> <td>0{{telephone}}</td> <td>{{adresse}}</td> </tr> </table>";
+
+			var template = Handlebars.compile(ts);
+
 			for (let value of datas) {
-				
-
-				var liste =
-					"<p>Prenom: {{prenom}}  Nom: {{nom}}  Âge: {{age}}  Numero de Téléphone 0{{telephone}}  Adresse: 	{{adresse}} </p>";
-
-				var template = Handlebars.compile(liste);
-
 				var html = template({
 					prenom: value.Prenom,
 					nom: value.Nom,
