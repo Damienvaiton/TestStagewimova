@@ -1,4 +1,5 @@
 const Per = document.getElementById("Test");
+const reset = document.getElementById("Reset");
 
 Per.addEventListener("click", (event) => {
 	$.ajax({
@@ -21,7 +22,6 @@ Per.addEventListener("click", (event) => {
 					telephone: value.Telephone,
 					adresse: value.Adresse,
 				});
-
 				document.body.innerHTML += html;
 			}
 		},
