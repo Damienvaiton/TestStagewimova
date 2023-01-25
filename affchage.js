@@ -22,6 +22,7 @@ Per.addEventListener("click", (event) => {
 					telephone: value.Telephone,
 					adresse: value.Adresse,
 				});
+				
 				document.body.innerHTML += html;
 			}
 		},
