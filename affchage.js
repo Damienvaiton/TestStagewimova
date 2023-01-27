@@ -1,5 +1,12 @@
 const Per = document.getElementById("Test");
 const tabledata = document.getElementById("TAB");
+const reset = document.getElementById("reset");
+
+var original = tabledata.innerHTML;
+
+reset.addEventListener("click", (event) => {
+	tabledata.innerHTML = original;
+});
 
 Per.addEventListener("click", (event) => {
 	$.ajax({
@@ -7,6 +14,8 @@ Per.addEventListener("click", (event) => {
 		url: "./getdata.php",
 		datatype: "json",
 		success: function (data) {
+			tabledata.innerHTML = original;
+
 			let datas = JSON.parse(data);
 
 			var make = false;
