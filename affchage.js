@@ -15,21 +15,11 @@ Per.addEventListener("click", (event) => {
 		datatype: "json",
 		success: function (data) {
 			tabledata.innerHTML = original;
+			
 
 			let datas = JSON.parse(data);
 
-			var make = false;
-
 			for (let value of datas) {
-				if (make == true && row != null) {
-					row.remove();
-					cell1.remove();
-					cell2.remove();
-					cell3.remove();
-					cell4.remove();
-					cell5.remove();
-				}
-
 				var row = document.createElement("tr");
 				var cell1 = document.createElement("td");
 				var cell2 = document.createElement("td");
@@ -43,12 +33,11 @@ Per.addEventListener("click", (event) => {
 				row.appendChild(cell5);
 				var addcell1 = "{{prenom}}";
 				var addcell2 = "{{nom}}";
-				var addcell3 = "{{age}}";
-				var addcell4 = "0{{telephone}}";
+				var addcell3 = "{{age}} ans";
+				var addcell4 = "{{telephone}}";
 				var addcell5 = "{{adresse}}";
 
 				var template = Handlebars.compile(addcell1);
-
 				var template2 = Handlebars.compile(addcell2);
 				var template3 = Handlebars.compile(addcell3);
 				var template4 = Handlebars.compile(addcell4);
@@ -79,7 +68,6 @@ Per.addEventListener("click", (event) => {
 
 				tabledata.appendChild(row);
 			}
-			make = !make;
 		},
 	});
 });

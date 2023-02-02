@@ -3,10 +3,6 @@ td {
     border: 1px solid #000;
     border-collapse: collapse;
     background-color: white;
-
-    
-   
-    
 }
 
 
@@ -17,7 +13,6 @@ th {
     color: #fff;
     border : 1px solid #fff;
     width: 150px;
-    
 }
 
 table {
@@ -31,43 +26,32 @@ color: white;
 border: 1px solid white;
 border-radius: 5px;
 padding: 1%;
-
-
 }
 
 table {
-    
     margin: 0 auto;
     width: 80%;
 }
 
 #container {
- display: flex;
-   
+    display: flex;
     justify-content: center;
     align-items: center;
-
     padding: 5%;
-
-
 }
 
 header {
-    display: flex;
-    
+    display: flex; 
 }
 
-body {
-    
-}
+
 
 main {
-   
     padding: 5%;
 }
 
 
-/* Path: Model.css */
+
 
 
 
